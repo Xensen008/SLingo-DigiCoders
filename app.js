@@ -2,7 +2,7 @@ const signLanguageSelect = document.getElementById('sign-language-select');
 const inputText = document.getElementById('input-text');
 const aslOutput = document.getElementById('asl-output');
 
-// Define ASL, BSL, and CSL images for each letter and word
+
 const signLanguageImages = {
     asl: {
         A: 'images/ASL/A.png',
