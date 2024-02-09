@@ -20,6 +20,7 @@ div{
 .text{
     line-height: 2;
     text-wrap: wrap;
+    text-align: justify;
 }
 .text p{
     font-size: 20px;
