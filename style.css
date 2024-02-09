@@ -24,8 +24,8 @@ html {
 }
 
 body {
-    background: linear-gradient(to right, #434343, #000000);
-    color: #fff;
+    background: linear-gradient(to right, #E6E6FA, #B0C4DE);
+    color: #000;
 }
 
 #header {
@@ -38,9 +38,17 @@ body {
 }
 
 @keyframes gradient {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .container {
@@ -53,14 +61,14 @@ nav {
     justify-content: space-between;
     flex-wrap: wrap;
     border-radius: 20px;
-    background: linear-gradient(45deg, #434343, #000000);
+    background: linear-gradient(45deg, #E6E6FA, #B0C4DE);
     padding: 16px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
     font-size: 30px;
-    color: #fff;
+    color: #000;
 }
 
 nav ul li {
@@ -70,7 +78,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
     font-size: 18px;
     position: relative;
@@ -80,7 +88,7 @@ nav ul li a {
     width: 100%;
     margin-top: 10%;
     font-size: 30px;
-    color: #fff;
+    color: #000;
 }
 
 .header-text h1 {
@@ -121,7 +129,7 @@ nav ul li a {
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 70px;
-    overflow: auto;
+    /* overflow: auto; */
     position: relative;
     z-index: 100;
 }
@@ -130,45 +138,65 @@ nav ul li a {
     position: relative;
     width: 100px;
     height: 150px;
+    border: 2px solid black;
 }
 
 .btn {
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 2px solid #434343;
+    border: 2px solid #B0C4DE;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
-    background: linear-gradient(45deg, #434343, #000000);
-    color: white;
+    background: linear-gradient(45deg, #E6E6FA, #B0C4DE);
+    color: #000;
     transition: background 0.5s;
 }
 
 .btn:hover {
-    background: linear-gradient(45deg, #000000, #434343);
+    background: linear-gradient(45deg, #B0C4DE, #E6E6FA);
 }
-/* 
-FORUM CSS */
+
+/* FORUM CSS */
+#messages {
+    height: 300px;
+    overflow: auto;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+#input {
+    width: 80%;
+    height: 30px;
+}
+
+#submit {
+    width: 15%;
+    height: 34px;
+}
+
 #forum {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #333;
+    background-color: #f9f9f9;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     max-width: 600px;
-    margin:auto;
-    margin-top:175px;
+    margin: auto;
+    margin-top: 175px;
 }
 
 #forum h1 {
-    color: #fff;
+    color: #333;
     margin-bottom: 20px;
 }
 
-#forum input, #forum button {
+#forum input,
+#forum button {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -178,12 +206,12 @@ FORUM CSS */
 
 #forum button {
     color: white;
-    background: linear-gradient(45deg, #434343, #000000);
+    background-color: #5C6BC0;
     cursor: pointer;
 }
 
 #forum button:hover {
-    background: linear-gradient(45deg, #000000, #434343);
+    background-color: #3F51B5;
 }
 
 #forum #messages {
@@ -196,7 +224,7 @@ FORUM CSS */
 }
 
 #forum #messages p {
-    background-color: #666;
+    background-color: #E8EAF6;
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
