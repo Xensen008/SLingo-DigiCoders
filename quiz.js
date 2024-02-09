@@ -105,3 +105,10 @@ document.getElementById('play-again').onclick = function() {
 };
 
 displayQuestion();
+// Your existing JavaScript code...
+
+// Add this at the end
+document.getElementById('start').onclick = function() {
+  this.style.display = 'none';
+  displayQuestion();
+};
