@@ -15,6 +15,7 @@ div{
     height: 370px;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     border-top : 2px solid black;
 }
@@ -46,17 +47,29 @@ div{
 #About{
     background-color: #fff8e1;
 }
-
-#quiz-section {
+#quiz-learning{
+    height: 370px;
     width: 100%;
-    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    border-top : 2px solid black;
+}
+#learning-link{
+    height: 370px;
+    width: 50%;
+    
+}
+#quiz{
+    width: 100%;
+    width: 600px;
     margin: 0 auto;
     text-align: center;
+
 }
 
 #question-image {
     width: 100%;
-    height: auto;
+    height: 300px;
 }
 
 #choices {

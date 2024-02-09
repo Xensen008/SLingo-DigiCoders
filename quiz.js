@@ -50,7 +50,6 @@ var quizData = [
     choices: ['Hello', 'Bye', 'Door', 'Open']
   },
 
-  // More questions...
 ];
 
 var currentQuestionIndex = 0;
