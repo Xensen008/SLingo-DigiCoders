@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLingo Learn Forum</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #messages {
+            height: 300px;
+            overflow: auto;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        #input {
+            width: 80%;
+            height: 30px;
+        }
+
+        #submit {
+            width: 15%;
+            height: 34px;
+        }
+
+        #forum {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+            margin-top: 175px;
+        }
+
+        #forum h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #forum input,
+        #forum button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        #forum button {
+            color: white;
+            background-color: #5C6BC0;
+            cursor: pointer;
+        }
+
+        #forum button:hover {
+            background-color: #3F51B5;
+        }
+
+        #forum #messages {
+            width: 100%;
+            height: 200px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            overflow-y: auto;
+        }
+
+        #forum #messages p {
+            background-color: #E8EAF6;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="forum">
+        <h1>Learn Forum</h1>
+        <input id="username" type="text" placeholder="Enter your username here">
+        <div id="messages"></div>
+        <input id="input" type="text" placeholder="Enter your message here">
+        <button id="submit">Post</button>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+
+    <script>
+        // Initialize Firebase
+        var firebaseConfig = {
+            apiKey: "AIzaSyD17wA_W4DaSHCdjv2Yv5-mxI-CajqMo_0",
+            authDomain: "slingoforum.firebaseapp.com",
+            projectId: "slingoforum",
+            storageBucket: "slingoforum.appspot.com",
+            messagingSenderId: "776971184857",
+            appId: "1:776971184857:web:9da780a30ef7d572cb2cc8",
+            measurementId: "G-6RS9JZMWX6"
+        };
+        firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore();
+
+        // Get elements
+        var username = document.getElementById('username');
+        var input = document.getElementById('input');
+        var submit = document.getElementById('submit');
+        var messages = document.getElementById('messages');
+
+        // Generate a random username if not already set
+        if (!localStorage.getItem('username')) {
+            var randomUsername = 'User' + Math.floor(Math.random() * 10000);
+            localStorage.setItem('username', randomUsername);
+        }
+        username.value = localStorage.getItem('username');
+
+        // Update username in local storage when it changes
+        username.addEventListener('change', () => {
+            localStorage.setItem('username', username.value);
+        });
+
+        // Load messages
+        db.collection('messages').orderBy('timestamp').onSnapshot(snapshot => {
+            messages.innerHTML = '';
+            snapshot.forEach(doc => {
+                var message = doc.data().message;
+                messages.innerHTML += '<p>' + message + '</p>';
+            });
+        });
+
+        // Post a message
+        submit.addEventListener('click', () => {
+            var message = username.value + ': ' + input.value;
+            db.collection('messages').add({
+                message: message,
+                timestamp: firebase.firestore.FieldValue.serverTimestamp()
+            });
+            input.value = '';
+        });
+    </script>
+</body>
+
+</html>
