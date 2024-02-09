@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f4;
+}
+div{
+    padding-top: 10px;
+    padding-left : 10px;
+}
+.info{
+    height: 370px;
+    width: 100%;
+    justify-content: flex-start;
+    border-top : 2px solid black;
+}
+.text{
+    line-height: 2;
+    text-wrap: wrap;
+}
+.text p{
+    font-size: 20px;
+    font-weight: 500;
+}
+.info .text{
+    width: 80%;
+}
+.info img{
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    right : 30px;
+    top : 35px;
+    border-radius: 20px;
+}
+#About{
+    display: flex;
+    background-color: aqua;
+}
+
