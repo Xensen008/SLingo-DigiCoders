@@ -6,6 +6,36 @@
     <title>SLingo - yes you can!</title>
 </head>
 <body>
-    
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <span><b>S</b></span><b>Lingo</b>
+                </div>
+                <ul>
+                    <li><a href="#header"><i class="fa-solid fa-house"></i>Home</a></li>
+                    <li><a href="#About"><i class="fa-solid fa-user"></i>About</a></li>
+                    <li><a href="#">Learn   ing</a></li>
+                    <li><a href="#">ASL</a></li>
+                    <li><a href="#">BSL</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>SignLingo</p>
+                <h1>Welcome to <span style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" id="element"></span><br>language converter</h1>
+                <select id="sign-language-select" class="btn btn2">
+                    <option id="top" value="asl">ASL (American Sign Language)</option>
+                    <option id="middle" value="bsl">BSL (British Sign Language)</option>
+                </select>
+                <form id="asl-form">
+                    <input type="text" name="text" id="input-text" placeholder="Enter text">
+                    <button class="btn btn2" id="button" type="submit"><span>Translate</span></button>
+                </form>
+                <div id="asl-output"></div>
+            </div>
+            <div class="header-image"></div>
+            <script src="app.js"></script>
+        </div>
+    </div>
 </body>
 </html>
