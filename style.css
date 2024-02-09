@@ -14,6 +14,7 @@ div{
 .info{
     height: 370px;
     width: 100%;
+    display: flex;
     justify-content: flex-start;
     border-top : 2px solid black;
 }
@@ -27,11 +28,11 @@ div{
     font-weight: 500;
 }
 .info .text{
-    width: 80%;
+    width: 72%;
 }
 .info img{
-    height: 250px;
-    width: 250px;
+    height: 300px;
+    width: 325px;
     position: absolute;
     right : 30px;
     top : 35px;
@@ -43,7 +44,49 @@ div{
     box-shadow: none;
 }
 #About{
-    display: flex;
-    background-color: aqua;
+    background-color: #fff8e1;
 }
 
+#quiz-section {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#question-image {
+    width: 100%;
+    height: auto;
+}
+
+#choices {
+    display: flex;
+    flex-direction: column;
+}
+
+.choice-button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 18px;
+}
+
+#score {
+    font-size: 24px;
+    margin-top: 20px;
+}
+#play-again {
+    display: none;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#play-again:hover {
+    background-color: #0056b3;
+}
