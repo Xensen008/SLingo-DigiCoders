@@ -35,6 +35,11 @@ div{
     right : 30px;
     top : 35px;
     border-radius: 20px;
+    box-shadow: 0 20px 30px -6px rgba(238, 103, 97, 0.5);
+}
+.info img:hover {
+    transform: translateY(3px);
+    box-shadow: none;
 }
 #About{
     display: flex;
