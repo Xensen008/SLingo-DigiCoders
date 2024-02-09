@@ -2,26 +2,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    transition: all 0.3s ease;
 }
+
 body{
     font-family: 'Poppins', sans-serif;
-    background: #f4f4f4;
+    background: linear-gradient(to right, #E6E6FA, #B0C4DE);
+    color: #000;
 }
+
 div{
     padding-top: 10px;
     padding-left : 10px;
-}
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    box-sizing: border-box;
-    transition: all 0.3s ease;
 }
 
 html {
     scroll-behavior: smooth;
 }
+
 
 body {
     background: linear-gradient(to right, #E6E6FA, #B0C4DE);
@@ -269,12 +268,67 @@ nav ul li a {
 }
 
 
-/* QUIZ CSS */
-#quiz-learning{
-    height: 370px;
+/* QUIZ-Learning CSS */
+
+#container-quiz-learning{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+#quiz-learning {
+    height: auto; 
     width: 100%;
     display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    border-top : 2px solid black;
+}
+
+#quiz-learning h2 {
+    font-size: 24px;
+    margin-bottom: 20px; /* Add some space between the heading and the books div */
+    align-self: flex-start;
+}
+
+.books {
+    display: flex;
+    flex-wrap: wrap; /* Allow the books to wrap onto multiple lines */
     justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    border-top: 2px solid black;
+}
+
+.books a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+.books img {
+    height: 203px;
+    width: 153px;
+    margin-bottom: 10px; /* Add some space between the image and the paragraph */
+}
+
+.books a p {
+    text-align: center;
+    font-size: 20px;
+    text-wrap: wrap;
+}
+
+
+
+
+#quiz-learning{
+    height: auto; 
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
     border-top : 2px solid black;
 }
 #learning-link{
@@ -283,9 +337,10 @@ nav ul li a {
     
 }
 #quiz{
-    width: 50%;
+    width: 100%; 
     text-align: center;
 }
+
 
 #question-image {
     width: 100%;
