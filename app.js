@@ -42,29 +42,25 @@ const signLanguageImages = {
     },
 };
 
-// New functions
-function createImageElement(src) {
-    const aslImage = document.createElement('img');
-    aslImage.src = src;
-    aslImage.classList.add('asl-image');
-    return aslImage;
-}
-
-function createWordSpan(aslImage) {
-    const wordSpan = document.createElement('span');
-    wordSpan.classList.add('word-border');
-    wordSpan.appendChild(aslImage);
-    return wordSpan;
-}
-
+// Function to display the selected sign language images
 function displaySignLanguageImages(signLanguage, text) {
     aslOutput.innerHTML = '';
 
     for (const letter of text) {
         if (signLanguageImages[signLanguage][letter]) {
-            const aslImage = createImageElement(signLanguageImages[signLanguage][letter]);
-            const wordSpan = createWordSpan(aslImage);
+            const aslImage = document.createElement('img');
+            aslImage.src = signLanguageImages[signLanguage][letter];
+            aslImage.classList.add('asl-image');
+            
+
+            const wordSpan = document.createElement('span');
+            wordSpan.classList.add('word-border');
+            wordSpan.appendChild(aslImage);
+
             aslOutput.appendChild(wordSpan);
+
+
+            // aslOutput.appendChild(aslImage);
         }
     }
 }
