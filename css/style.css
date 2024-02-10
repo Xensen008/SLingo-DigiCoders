@@ -148,7 +148,7 @@ nav ul li a:hover {
     width: 100px;
     height: 150px;
     border: 2px solid black;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }
 
