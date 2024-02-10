@@ -366,12 +366,12 @@ nav ul li a {
     font-size: 10px;
     text-wrap: wrap;
 }
-
-#container-quiz-learning hr{
-    width: 100%;
-    margin: 20px 0;
-    border: 1px solid black;
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, #ff6347, #40e0d0); /* Change these to any colors you want */
 }
+
 #yt-links {
     width: 100%;
     padding: 20px;
@@ -385,7 +385,7 @@ nav ul li a {
     height: 270px;
     margin-bottom: 20px;
     border: 2px solid black;
-    margin-left : 25px;
+    margin-left : 40px;
     border-radius: 25px;
 }
 #yt-links h2 {
@@ -401,6 +401,7 @@ nav ul li a {
     flex: 1 0 21%; 
     margin: 10px;
     box-sizing: border-box;
+    margin-left : 70px; 
 }
 
 #yt-links ul li {
