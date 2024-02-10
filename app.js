@@ -66,16 +66,16 @@ const signLanguageImages = {
     },
 };
 
-// Function to display the selected sign language images
 function displaySignLanguageImages(signLanguage, text) {
     aslOutput.innerHTML = '';
 
-    for (const letter of text) {
-        if (signLanguageImages[signLanguage][letter]) {
+    const words = text.split(' ');
+
+    for (const word of words) {
+        if (signLanguageImages[signLanguage][word]) {
             const aslImage = document.createElement('img');
-            aslImage.src = signLanguageImages[signLanguage][letter];
+            aslImage.src = signLanguageImages[signLanguage][word];
             aslImage.classList.add('asl-image');
-            
 
             const wordSpan = document.createElement('span');
             wordSpan.classList.add('word-border');
@@ -86,15 +86,37 @@ function displaySignLanguageImages(signLanguage, text) {
             setTimeout(function() {
                 aslImage.classList.add('visible');
             }, 0);
-            // aslOutput.appendChild(aslImage);
+        } else {
+            // Display each letter of the word individually
+            for (const letter of word) {
+                if (signLanguageImages[signLanguage][letter]) {
+                    const aslImage = document.createElement('img');
+                    aslImage.src = signLanguageImages[signLanguage][letter];
+                    aslImage.classList.add('asl-image');
+
+                    const letterSpan = document.createElement('span');
+                    letterSpan.classList.add('letter-border');
+                    letterSpan.appendChild(aslImage);
+
+                    aslOutput.appendChild(letterSpan);
+
+                    setTimeout(function() {
+                        aslImage.classList.add('visible');
+                    }, 0);
+                }
+            }
         }
     }
 }
 
-// Event listener for form submission
 document.getElementById('asl-form').addEventListener('submit', function (event) {
     event.preventDefault();
     const signLanguage = signLanguageSelect.value;
     const inputTextValue = inputText.value.trim().toUpperCase();
+    const specialCharRegex = /[^A-Za-z ]/;
+    if (specialCharRegex.test(inputTextValue)) {
+        alert('Please enter only alphabets and spaces.');
+        return;
+    }
     displaySignLanguageImages(signLanguage, inputTextValue);
 });
