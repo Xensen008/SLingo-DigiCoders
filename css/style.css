@@ -12,7 +12,7 @@ html {
 
 body {
     /* background: linear-gradient(to right, #E6E6FA, #B0C4DE); */
-    background-color: white;
+    background: #F5F5F5;
     color: #000;
 }
 
@@ -42,14 +42,14 @@ body {
 .container {
     padding: 20px 10%;
 }
-
+/* #B0C4DE */
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     border-radius: 20px;
-    background: linear-gradient(45deg, #E6E6FA, #B0C4DE);
+    background: linear-gradient(45deg, #dcd6f7, #fde2e4);
     padding: 16px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
@@ -85,6 +85,10 @@ nav ul li a:hover {
 
 .header-text h1 {
     font-size: 60px;
+    margin: 20px;
+}
+.header-text p {
+    font-size: 40 px;
     margin: 20px;
 }
 
@@ -148,7 +152,8 @@ nav ul li a:hover {
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
-    background: linear-gradient(45deg, #E6E6FA, #B0C4DE);
+    background-color: #dcd6f7;
+    /* background: linear-gradient(45deg, #E6E6FA, #c2a7db); */
     color: #000;
     transition: background 0.5s;
 }
