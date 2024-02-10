@@ -7,21 +7,24 @@
     <title>Quiz</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="icon" href="favicon.ico">
+    <script src="https://kit.fontawesome.com/637810c134.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="container" id="container-quiz-learning">
-        <nav>
+        <nav id="navbar">
             <div class="logo">
                 <a href="index.html"><span><b>S</b></span><b>Lingo</b></a>
             </div>
-            <ul>
-                <li><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
-                <li><a href="About.html"><i class="fa-solid fa-user"></i>About</a></li>
-                <li><a href="learning.html">Learning</a></li>
-                <li><a href="#">Dictonary</a></li>
-                <li><a href="forum.html">Learn Forum</a></li>
+            <ul id="sidemenu">
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="About.html"><i class="fa-solid fa-user"></i> About</a></li>
+                <li><a href="./learning.html"><i class="fa-solid fa-book"></i> Learning</a></li>
+                <li><a href="./forum.html"><i class="fa-solid fa-comment"></i> Learn Forum</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
             </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
         <div id="quiz-learning">
             <div class="books">
@@ -139,6 +142,15 @@
         $(document).ready(function () {
             console.log("jQuery is working!");
         });
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px ";
+        }
     </script>
 
 </body>

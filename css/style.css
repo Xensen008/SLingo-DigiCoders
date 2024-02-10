@@ -148,7 +148,7 @@ nav ul li a {
 
 /* QUIZ-Learning CSS */
 
-#container-quiz-learning{
+#container-quiz-learning {
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -156,22 +156,24 @@ nav ul li a {
 }
 
 #quiz-learning {
-    height: auto; 
+    height: auto;
     width: 100%;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: flex-start;
 }
 
 #quiz-learning h2 {
     font-size: 24px;
-    margin-bottom: 20px; /* Add some space between the heading and the books div */
+    margin-bottom: 20px;
+    /* Add some space between the heading and the books div */
     align-self: flex-start;
 }
 
 .books {
     display: flex;
-    flex-wrap: wrap; /* Allow the books to wrap onto multiple lines */
+    flex-wrap: wrap;
+    /* Allow the books to wrap onto multiple lines */
     justify-content: space-between;
     gap: 20px;
     width: 100%;
@@ -198,8 +200,9 @@ nav ul li a {
     transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
-    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+.flip-card-front,
+.flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -214,13 +217,13 @@ nav ul li a {
 
 .flip-card-front {
     background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%,
-     rgb(255, 211, 195) 40%, rgba(28, 20, 17, 0.603) 48%);
+            rgb(255, 211, 195) 40%, rgba(28, 20, 17, 0.603) 48%);
     color: coral;
 }
 
 .flip-card-back {
     background: linear-gradient(120deg, rgb(255, 174, 145) 30%, coral 88%,
-     bisque 40%, rgb(255, 185, 160) 78%);
+            bisque 40%, rgb(255, 185, 160) 78%);
     color: white;
     transform: rotateY(180deg);
 }
@@ -236,7 +239,8 @@ nav ul li a {
 .books img {
     height: 203px;
     width: 153px;
-    margin-bottom: 10px; /* Add some space between the image and the paragraph */
+    margin-bottom: 10px;
+    /* Add some space between the image and the paragraph */
 }
 
 .books a p {
@@ -244,10 +248,12 @@ nav ul li a {
     font-size: 10px;
     text-wrap: wrap;
 }
+
 hr {
     border: none;
     height: 2px;
-    background: linear-gradient(to right, #ff6347, #40e0d0); /* Change these to any colors you want */
+    background: linear-gradient(to right, #ff6347, #40e0d0);
+    /* Change these to any colors you want */
 }
 
 #yt-links {
@@ -258,14 +264,16 @@ hr {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-#yt-links iframe{
+
+#yt-links iframe {
     width: 350px;
     height: 270px;
     margin-bottom: 20px;
     border: 2px solid black;
-    margin-left : 40px;
+    margin-left: 40px;
     border-radius: 25px;
 }
+
 #yt-links h2 {
     color: #000000;
     margin-bottom: 10px;
@@ -276,10 +284,10 @@ hr {
     list-style-type: none;
     padding: 0;
     display: flex;
-    flex: 1 0 21%; 
+    flex: 1 0 21%;
     margin: 10px;
     box-sizing: border-box;
-    margin-left : 70px; 
+    margin-left: 70px;
 }
 
 #yt-links ul li {
@@ -330,38 +338,46 @@ hr {
     #learning-link {
         width: 100%;
     }
+
 }
 
-#quiz-learning{
-    height: auto; 
+#quiz-learning {
+    height: auto;
     width: 100%;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
-#learning-link{
+
+#learning-link {
     height: 370px;
     width: 50%;
 }
-.quiz-container{
-    display : flex;
+
+.quiz-container {
+    display: flex;
     justify-content: center;
     flex-direction: row;
     width: 100%;
     height: auto;
 }
-#quiz{
-    width: 50%; 
+
+#quiz {
+    width: 50%;
     text-align: center;
     flex: 1;
 }
-#quiz, #right-side{
-    position:relative;
-    top : 20px;
+
+#quiz,
+#right-side {
+    position: relative;
+    top: 20px;
 }
-#right-side{
-    top : 80px;
+
+#right-side {
+    top: 80px;
 }
-#right-side h3{
+
+#right-side h3 {
     margin-top: 20px;
 }
 
@@ -379,19 +395,24 @@ hr {
     margin: 10px 0;
     padding: 10px;
     font-size: 18px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add this line */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Add this line */
 }
 
 .choice-button:hover {
-    transform: scale(1.05); /* Add this line */
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.1); /* Add this line */
+    transform: scale(1.05);
+    /* Add this line */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    /* Add this line */
 }
 
 #score-image {
     width: 100px;
     transition: opacity 1s ease-in-out;
 }
-#start, #play-again {
+
+#start,
+#play-again {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 18px;
@@ -400,12 +421,15 @@ hr {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Modify this line */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Modify this line */
 }
 
-#start:hover, #play-again:hover {
+#start:hover,
+#play-again:hover {
     background-color: #0056b3;
-    transform: scale(1.05); /* Add this line */
+    transform: scale(1.05);
+    /* Add this line */
 }
 
 
@@ -419,32 +443,97 @@ hr {
     justify-content: center;
 }
 
-#start, #play-again {
+#start,
+#play-again {
     font-size: 1.5em;
     color: #fff;
     background-color: #007BFF;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-#start:hover, #play-again:hover {
+#start:hover,
+#play-again:hover {
     background-color: #0056b3;
 }
+
 @media (max-width: 768px) {
-    .quiz-container{
+    .quiz-container {
         flex-direction: column;
     }
-    #quiz, #right-side {
+
+    #quiz,
+    #right-side {
         width: 100%;
     }
+
     #right-side {
         height: auto;
     }
+
     #question-image {
         height: auto;
     }
+}
+
+/* --------------css media-------------- */
+nav .fas {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .header-text {
+        /* background-image: url(images/phone-background.png); */
+        margin-top: 15%;
+        font-size: 16px;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    .logo {
+        font-size: 34px;
+    }
+
+    .btn.git {
+        display: none;
+    }
+
+    nav .fas {
+        display: block;
+        font-size: 30px;
+
+    }
+
+    nav ul {
+        background: #4f96eb;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+
+    }
+
+    nav ul .fas {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+
 }

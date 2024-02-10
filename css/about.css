@@ -9,8 +9,7 @@ body {
 }
 
 .container {
-    width: 80%; /* Adjust as needed */
-    margin: 0 auto;
+    padding: 20px 10%;
 }
 
 section {
@@ -40,7 +39,11 @@ section img {
     opacity: 0;
     animation: fadeIn 2s ease-in-out 1s forwards;
 }
-
+iframe {
+    min-width: 100%;
+    height: 410px;
+    display: flex;
+}
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -49,5 +52,61 @@ section img {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .header-text {
+        /* background-image: url(images/phone-background.png); */
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    .logo {
+        font-size: 34px;
+    }
+
+    .btn.git {
+        display: none;
+    }
+
+    nav .fas {
+        display: block;
+        font-size: 30px;
+
+    }
+
+    nav ul {
+        background: #4f96eb;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+
+    }
+
+    nav ul .fas {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    iframe {
+        min-width: 100%;
+        height: 215px;
+        display: flex;
     }
 }

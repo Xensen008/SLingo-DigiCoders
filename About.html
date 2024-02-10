@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <link rel="stylesheet" href="./css/about.css">
+    <link rel="icon" href="favicon.ico">
+    <script src="https://kit.fontawesome.com/637810c134.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
@@ -12,19 +14,22 @@
             <div class="logo">
                 <a href="index.html"><span><b>S</b></span><b>Lingo</b></a>
             </div>
-            <ul>
-                <li><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
-                <li><a href="About.html"><i class="fa-solid fa-user"></i>About</a></li>
-                <li><a href="./learning.html">Learning</a></li>
-                <li><a href="./forum.html">Learn Forum</a></li>
+            <ul id="sidemenu">
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="About.html"><i class="fa-solid fa-user"></i> About</a></li>
+                <li><a href="./learning.html"><i class="fa-solid fa-book"></i> Learning</a></li>
+                <li><a href="./forum.html"><i class="fa-solid fa-comment"></i> Learn Forum</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
             </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
     </div>
     <section id="sign-language">
         <h1>What is Sign Language?</h1>
         <p>Sign language is a visual means of communicating using gestures, facial expression, and body language. Sign Language is used mainly by people who are Deaf or have hearing impairments.</p>
         <p>It is a complete language with a unique vocabulary, construction and grammar. In the United States, Sign Language is considered a foreign language due to its unique vocabulary and construction.</p>
-        <img src="./images/ASL.jpg" alt="Sign Language">
+        <!-- <img src="./images/ASL.jpg" alt="Sign Language"> -->
+        <iframe src="https://www.youtube.com/embed/3jqdRk-Naz4?si=JWel7x1yQwgdZSXO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </section>
 
     <section id="asl">
@@ -40,5 +45,15 @@
         <p>It is estimated that 125,000 deaf adults in the UK use BSL, plus an estimated 20,000 children. In 2011, 15,000 people living in England and Wales reported themselves using BSL as their main language.</p>
         <img src="./images/BSL.jpg" alt="BSL">
     </section>
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px ";
+        }
+    </script>
 </body>
 </html>

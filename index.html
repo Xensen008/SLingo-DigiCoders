@@ -7,6 +7,7 @@
     <title>SLingo - yes you can!</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="favicon.ico">
+    <script src="https://kit.fontawesome.com/637810c134.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -16,16 +17,18 @@
                 <div class="logo">
                     <a href="index.html"><span><b>S</b></span><b>Lingo</b></a>
                 </div>
-                <ul>
-                    <li><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
-                    <li><a href="About.html"><i class="fa-solid fa-user"></i>About</a></li>
-                    <li><a href="./learning.html">Learning</a></li>
-                    <li><a href="./forum.html">Learn Forum</a></li>
+                <ul id="sidemenu">
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="About.html"><i class="fa-solid fa-user"></i> About</a></li>
+                    <li><a href="./learning.html"><i class="fa-solid fa-book"></i> Learning</a></li>
+                    <li><a href="./forum.html"><i class="fa-solid fa-comment"></i> Learn Forum</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>SignLingo</p>
-                <h1>Welcome to <span style="color:#7948a7;" id="element"></span><br>language converter</h1>
+                <h1>Welcome to <span style="color:#64378e;" id="element"></span><br>language converter</h1>
                 <select id="sign-language-select" class="btn btn2">
                     <option id="top" value="asl">ASL (American Sign Language)</option>
                     <option id="middle" value="bsl">BSL (British Sign Language)</option>
@@ -47,6 +50,16 @@
                     backSpeed: 50,
                     loop: true
                 });
+            </script>
+            <script>
+
+                var sidemenu = document.getElementById("sidemenu");
+                function openmenu() {
+                    sidemenu.style.right = "0";
+                }
+                function closemenu() {
+                    sidemenu.style.right = "-200px ";
+                }
             </script>
         </div>
     </div>
