@@ -83,7 +83,9 @@ function displaySignLanguageImages(signLanguage, text) {
 
             aslOutput.appendChild(wordSpan);
 
-
+            setTimeout(function() {
+                aslImage.classList.add('visible');
+            }, 0);
             // aslOutput.appendChild(aslImage);
         }
     }

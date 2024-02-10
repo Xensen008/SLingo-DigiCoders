@@ -130,6 +130,12 @@ nav ul li a:hover {
     width: 100px;
     height: 150px;
     border: 2px solid black;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.asl-image.visible {
+    opacity: 1;
 }
 
 .btn {
