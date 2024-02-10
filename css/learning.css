@@ -72,6 +72,10 @@ nav ul li a {
     position: relative;
 }
 
+nav ul li a:hover {
+    color: #5d5d5d;
+}
+
 /* QUIZ-Learning CSS */
 
 #container-quiz-learning {
@@ -104,7 +108,8 @@ nav ul li a {
     gap: 17px;
     width: 100%;
     height: 300px;
-    background-color: white;
+    background-color:#b4c6e0;
+    /* background-color:rgb(176, 204, 228); */
     border-radius: 15px;
     padding: 20px;
 }
@@ -145,13 +150,13 @@ nav ul li a {
 }
 
 .flip-card-front {
-    background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%,
+    background: linear-gradient(120deg, rgb(95, 172, 223) 60%, rgb(156, 202, 249) 88%,
             rgb(255, 211, 195) 40%, rgba(28, 20, 17, 0.603) 48%);
     color: coral;
 }
 
 .flip-card-back {
-    background: linear-gradient(120deg, rgb(255, 174, 145) 30%, coral 88%,
+    background: linear-gradient(120deg, rgb(100, 165, 218) 30%, rgb(45, 151, 205) 88%,
             bisque 40%, rgb(255, 185, 160) 78%);
     color: white;
     transform: rotateY(180deg);
@@ -189,7 +194,7 @@ hr {
     height: 300px;
     width: 100%;
     padding: 20px;
-    background-color: white;
+    background-color: #b4c6e0;
     border-radius: 15px;
     display: flex;
     flex-wrap: wrap;
@@ -255,7 +260,7 @@ hr {
     flex-direction: row;
     width: 100%;
     height: 400px;
-    background-color: white;
+    background-color: #b4c6e0;
     border-radius: 15px;
     position: relative;
     top: 38px;

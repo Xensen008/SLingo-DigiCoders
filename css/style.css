@@ -71,6 +71,9 @@ nav ul li a {
     font-size: 18px;
     position: relative;
 }
+nav ul li a:hover {
+    color: #5d5d5d;
+}
 
 .header-text {
     width: 100%;
