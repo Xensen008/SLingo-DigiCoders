@@ -1,53 +1,53 @@
 var quizData = [
   {
-    image: 'images/ASL.jpg',
+    image: 'images/quiz/welcome.jpg',
+    correctAnswer: 'Welcome',
+    choices: ['Freedom', 'Inspect', 'Welcome', 'Surround']
+  },
+  {
+    image: 'images/quiz/come.jpg',
+    correctAnswer: 'Come',
+    choices: ['Bear', 'Come', 'Kite', 'Tree']
+  },
+  {
+    image: 'images/quiz/language.jpg',
+    correctAnswer: 'Language',
+    choices: ['Language', 'Pattern', 'Highway', 'Balloon']
+  },
+  {
+    image: 'images/quiz/save.jpg',
+    correctAnswer: 'Save',
+    choices: ['Fish', 'Save', 'Joke', 'Luck']
+  },
+  {
+    image: 'images/quiz/hello.jpg',
     correctAnswer: 'Hello',
-    choices: ['Hello', 'Bye', 'Door', 'Open']
+    choices: ['Candy', 'Lemon', 'Hello', 'Chess']
   },
   {
-    image: 'images/BSL.jpg',
-    correctAnswer: 'Open',
-    choices: ['Hello', 'Bye', 'Door', 'Open']
+    image: 'images/quiz/help.jpg',
+    correctAnswer: 'Help',
+    choices: ['Moon', 'Help', 'Walk', 'Love']
   },
   {
-    image: 'images/ASL.jpg',
-    correctAnswer: 'Open',
-    choices: ['Hello', 'Bye', 'Door', 'Open']
+    image: 'images/quiz/learning.jpg',
+    correctAnswer: 'Learning',
+    choices: ['Favorite', 'Festival', 'Audience', 'Learning']
   },
   {
-    image: 'images/BSL.jpg',
-    correctAnswer: 'Open',
-    choices: ['Hello', 'Bye', 'Door', 'Open']
+    image: 'images/quiz/phone.jpg',
+    correctAnswer: 'Phone',
+    choices: ['Phone', 'Dance', 'Apple', 'Plant']
   },
   {
-    image: 'images/ASL.jpg',
-    correctAnswer: 'Open',
-    choices: ['Hello', 'Bye', 'Door', 'Open']
+    image: 'images/quiz/Which language.jpg',
+    correctAnswer: 'BSL',
+    choices: ['ASL', 'CSL', 'FSL', 'BSL']
   },
   {
-    image: 'images/BSL.jpg',
-    correctAnswer: 'Open',
-    choices: ['Hello', 'Bye', 'Door', 'Open']
-  },
-  {
-    image: 'images/ASL.jpg',
-    correctAnswer: 'Open',
-    choices: ['Hello', 'Bye', 'Door', 'Open']
-  },
-  {
-    image: 'images/BSL.jpg',
-    correctAnswer: 'Open',
-    choices: ['Hello', 'Bye', 'Door', 'Open']
-  },
-  {
-    image: 'images/ASL.jpg',
-    correctAnswer: 'Open',
-    choices: ['Hello', 'Bye', 'Door', 'Open']
-  },
-  {
-    image: 'images/BSL.jpg',
-    correctAnswer: 'Open',
-    choices: ['Hello', 'Bye', 'Door', 'Open']
+    image: 'images/quiz/freedom.jpg',
+    correctAnswer: 'Freedom',
+    choices: ['Perfect', 'Freedom', 'Shelter', 'Curtain']
   },
 
 ];
