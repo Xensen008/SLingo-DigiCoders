@@ -148,18 +148,18 @@ nav ul li a:hover {
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 2px solid #B0C4DE;
+    border: 1.5px solid black;
     padding: 14px 50px;
     border-radius: 6px;
-    text-decoration: none;
-    background-color: #dcd6f7;
+    text-decoration: none; 
+    background-color: #fde2e4;
     /* background: linear-gradient(45deg, #E6E6FA, #c2a7db); */
     color: #000;
     transition: background 0.5s;
 }
 
 .btn:hover {
-    background: linear-gradient(45deg, #B0C4DE, #E6E6FA);
+    background: linear-gradient(40deg, #dcd6f7, #fde2e4);
 }
 
 
