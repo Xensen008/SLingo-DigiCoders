@@ -497,43 +497,6 @@ hr {
     text-decoration: underline;
 }
 
-
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    #container-quiz-learning {
-        flex-direction: column;
-    }
-
-    #quiz-learning {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .books {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .flip-card {
-        width: 100%;
-    }
-
-    #yt-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #yt-links iframe {
-        width: 100%;
-        height: auto;
-    }
-
-    #learning-link {
-        width: 100%;
-    }
-}
-
 #quiz-learning{
     height: auto; 
     width: 100%;
@@ -557,6 +520,7 @@ hr {
 }
 #quiz{
     width: 50%; 
+    height: 400px;
     text-align: center;
     flex: 1;
 }
@@ -572,6 +536,8 @@ hr {
 }
 
 #question-image {
+    position: relative;
+    left : 5px;
     width: 100%;
     height: px;
     border: 4px solid black;
