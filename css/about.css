@@ -3,7 +3,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    padding: 1em;
+    padding: 0 5em;
     color: #333;
     /* Use the same gradient as your main website */
 }
@@ -56,6 +56,10 @@ iframe {
 }
 
 @media only screen and (max-width: 600px) {
+
+    body{
+        padding: 0 1rem;
+    }
     .header-text {
         /* background-image: url(images/phone-background.png); */
         margin-top: 100%;
