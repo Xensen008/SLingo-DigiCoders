@@ -100,7 +100,7 @@ function updateImageBasedOnScore() {
   
   if (score <= 2) {
       imageElement.src = 'images/score-based-image/l.png';
-  } else if (score <= 4) {
+  } else if (score <= 6) {
       imageElement.src = 'images/score-based-image/m.png';
   } else {
       imageElement.src = 'images/score-based-image/h.png';

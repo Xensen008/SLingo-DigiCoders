@@ -330,13 +330,13 @@ nav ul li a {
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border: 1px solid coral;
+    /* border: 1px solid coral; */
     border-radius: 1rem;
 }
 
 .flip-card-front {
     background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%,
-     rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.603) 48%);
+     rgb(255, 211, 195) 40%, rgba(28, 20, 17, 0.603) 48%);
     color: coral;
 }
 
@@ -508,6 +508,7 @@ hr {
     transform: scale(1.05); /* Add this line */
     box-shadow: 0px 10px 20px rgba(0,0,0,0.1); /* Add this line */
 }
+
 #score-image {
     width: 100px;
     transition: opacity 1s ease-in-out;
@@ -541,13 +542,13 @@ hr {
 }
 
 #start, #play-again {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 18px;
-    color: white;
+    font-size: 1.5em;
+    color: #fff;
     background-color: #007BFF;
     border: none;
+    padding: 10px 20px;
     border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.25);
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
