@@ -93,22 +93,35 @@ function checkAnswer(userChoice) {
   }
   
   document.getElementById('score').textContent = 'Score: ' + score;
+  updateImageBasedOnScore();
+}
+function updateImageBasedOnScore() {
+  var imageElement = document.getElementById('score-image'); // Assuming you have an image with id 'score-image'
+  
+  if (score <= 2) {
+      imageElement.src = 'images/score-based-image/l.png';
+  } else if (score <= 4) {
+      imageElement.src = 'images/score-based-image/m.png';
+  } else {
+      imageElement.src = 'images/score-based-image/h.png';
+  }
 }
 
+updateImageBasedOnScore(); // Call the function here
+
 document.getElementById('play-again').onclick = function() {
-  currentQuestionIndex = 0;
-  score = 0;
-  incorrect = false;
-  document.getElementById('score').textContent = 'Score: ' + score;
-  document.getElementById('play-again').style.display = 'none';
-  displayQuestion();
+currentQuestionIndex = 0;
+score = 0;
+incorrect = false;
+document.getElementById('score').textContent = 'Score: ' + score;
+document.getElementById('play-again').style.display = 'none';
+updateImageBasedOnScore();
+displayQuestion();
 };
 
 displayQuestion();
-// Your existing JavaScript code...
 
-// Add this at the end
 document.getElementById('start').onclick = function() {
-  this.style.display = 'none';
-  displayQuestion();
+this.style.display = 'none';
+displayQuestion();
 };

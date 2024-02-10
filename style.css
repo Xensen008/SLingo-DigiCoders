@@ -416,7 +416,42 @@ nav ul li a {
     text-decoration: underline;
 }
 
+/* Your existing CSS code */
 
+/* Responsive styles */
+@media (max-width: 768px) {
+    #container-quiz-learning {
+        flex-direction: column;
+    }
+
+    #quiz-learning {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .books {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flip-card {
+        width: 100%;
+    }
+
+    #yt-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #yt-links iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    #learning-link {
+        width: 100%;
+    }
+}
 
 #quiz-learning{
     height: auto; 
@@ -427,10 +462,10 @@ nav ul li a {
 #learning-link{
     height: 370px;
     width: 50%;
-    
 }
 .quiz-container{
     display : flex;
+    justify-content: center;
     flex-direction: row;
     width: 100%;
     height: auto;
@@ -440,7 +475,16 @@ nav ul li a {
     text-align: center;
     flex: 1;
 }
-
+#quiz, #right-side{
+    position:relative;
+    top : 20px;
+}
+#right-side{
+    top : 80px;
+}
+#right-side h3{
+    margin-top: 20px;
+}
 
 #question-image {
     width: 100%;
@@ -463,7 +507,10 @@ nav ul li a {
     transform: scale(1.05); /* Add this line */
     box-shadow: 0px 10px 20px rgba(0,0,0,0.1); /* Add this line */
 }
-
+#score-image {
+    width: 100px;
+    transition: opacity 1s ease-in-out;
+}
 #start, #play-again {
     margin-top: 20px;
     padding: 10px 20px;
@@ -506,4 +553,18 @@ nav ul li a {
 
 #start:hover, #play-again:hover {
     background-color: #0056b3;
+}
+@media (max-width: 768px) {
+    .quiz-container{
+        flex-direction: column;
+    }
+    #quiz, #right-side {
+        width: 100%;
+    }
+    #right-side {
+        height: auto;
+    }
+    #question-image {
+        height: auto;
+    }
 }
