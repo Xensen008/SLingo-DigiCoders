@@ -132,6 +132,9 @@ nav ul li a {
 
 }
 
+nav .fas {
+    display: none;
+}
 @media only screen and (max-width: 600px) {
     .header-text {
         /* background-image: url(images/phone-background.png); */
