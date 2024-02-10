@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLingo Learn Forum</title>
+    <link rel="stylesheet" href="./css/forum.css">
+    <link rel="icon" href="favicon.ico">
+    <script src="https://kit.fontawesome.com/637810c134.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav id="navbar">
+            <div class="logo">
+                <a href="index.html"><span><b>S</b></span><b>Lingo</b></a>
+            </div>
+            <ul id="sidemenu">
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="About.html"><i class="fa-solid fa-user"></i> About</a></li>
+                <li><a href="./learning.html"><i class="fa-solid fa-book"></i> Learning</a></li>
+                <li><a href="./forum.html"><i class="fa-solid fa-comment"></i> Learn Forum</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+
+    <div id="forum">
+        <h1>Learn Forum</h1>
+        <input id="username" type="text" placeholder="Enter your username here" disabled>
+        <button id="change-username">Change Username</button>
+        <div id="messages"></div>
+        <input id="input" type="text" placeholder="Enter your message here">
+        <button id="submit">Post</button>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+
+    <script>
+        // Initialize Firebase
+        var firebaseConfig = {
+            apiKey: "AIzaSyD17wA_W4DaSHCdjv2Yv5-mxI-CajqMo_0",
+            authDomain: "slingoforum.firebaseapp.com",
+            projectId: "slingoforum",
+            storageBucket: "slingoforum.appspot.com",
+            messagingSenderId: "776971184857",
+            appId: "1:776971184857:web:9da780a30ef7d572cb2cc8",
+            measurementId: "G-6RS9JZMWX6"
+        };
+        firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore();
+
+        // Get elements
+        var username = document.getElementById('username');
+        var changeUsernameButton = document.getElementById('change-username');
+        var input = document.getElementById('input');
+        var submit = document.getElementById('submit');
+        var messages = document.getElementById('messages');
+
+        // Generate a random username if not already set
+        if (!localStorage.getItem('username')) {
+            var randomUsername = 'User' + Math.floor(Math.random() * 10000);
+            localStorage.setItem('username', randomUsername);
+        }
+        username.value = localStorage.getItem('username');
+
+        // Enable the username input when the change username button is clicked
+        changeUsernameButton.addEventListener('click', () => {
+            username.disabled = false;
+        });
+
+        // Disable the username input and update the username in local storage when it changes
+        username.addEventListener('change', () => {
+            username.disabled = true;
+            localStorage.setItem('username', username.value);
+        });
+
+        // Load messages
+        db.collection('messages').orderBy('timestamp').onSnapshot(snapshot => {
+            messages.innerHTML = '';
+            snapshot.forEach(doc => {
+                var message = doc.data().message;
+                messages.innerHTML += '<p>' + message + '</p>';
+            });
+        });
+
+        // Post a message
+        submit.addEventListener('click', () => {
+            var message = username.value + ': ' + input.value;
+            db.collection('messages').add({
+                message: message,
+                timestamp: firebase.firestore.FieldValue.serverTimestamp()
+            });
+            input.value = '';
+        });
+    </script>
+</body>
+
+</html>

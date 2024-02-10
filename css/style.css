@@ -231,114 +231,7 @@ nav ul li a {
     margin-bottom: 10px;
 }
 
-/* ABOUT CSS */
-.info{
-    height: 370px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    border-top : 2px solid #ddd;
-    padding: 20px;
-}
 
-.text h1{
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.info img{
-    height: 300px;
-    width: 325px;
-    border-radius: 20px;
-    box-shadow: 0 20px 30px -6px rgba(238, 103, 97, 0.5);
-    margin-top: 20px;
-}
-
-#About{
-    background-color: #B0C4DE;
-}
-
-.blob {
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: #ffcccc;
-    opacity: 1;
-    filter: blur(12px);
-    animation: blob-bounce 5s infinite ease;
-}
-
-.card {
-    position: relative;
-    width: 200px;
-    height: 250px;
-    border-radius: 14px;
-    z-index: 1111;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
-    ;
-  }
-  
-  .bg {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 190px;
-    height: 240px;
-    z-index: 2;
-    background-image: url(images/about.jpeg);
-    background-size: cover;
-    backdrop-filter: blur(24px);
-    border-radius: 10px;
-    overflow: hidden;
-    outline: 2px solid white;
-  }
-  
-  .blob {
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: #ff0000;
-    opacity: 1;
-    filter: blur(12px);
-    animation: blob-bounce 5s infinite ease;
-  }
-  
-  @keyframes blob-bounce {
-    0% {
-      transform: translate(-100%, -100%) translate3d(0, 0, 0);
-    }
-  
-    25% {
-      transform: translate(-100%, -100%) translate3d(100%, 0, 0);
-    }
-  
-    50% {
-      transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
-    }
-  
-    75% {
-      transform: translate(-100%, -100%) translate3d(0, 100%, 0);
-    }
-  
-    100% {
-      transform: translate(-100%, -100%) translate3d(0, 0, 0);
-    }
-  }
-  
 
 /* QUIZ-Learning CSS */
 
@@ -507,12 +400,7 @@ hr {
     height: 370px;
     width: 50%;
 }
-#quiz-learning {
-    height: auto; 
-    width: 100%;
-    display: flex;
-    flex-direction: column; 
-}
+
 
 .quiz-container {
     display: flex;
@@ -598,7 +486,14 @@ hr {
     transform: scale(1.05);
 }
 
+.asl-image {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
 
+.asl-image.visible {
+    opacity: 1;
+}
 @media (max-width: 600px) {
     #container-quiz-learning {
         flex-direction: column;
