@@ -280,5 +280,7 @@ nav .fas {
         cursor: pointer;
     }
 
-
+    #sl-image {
+        visibility: hidden;
+    }
 }
