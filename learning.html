@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container" id="container-quiz-learning">
+        <nav>
+            <div class="logo">
+                <span><b>S</b></span><b>Lingo</b>
+            </div>
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="About.html"><i class="fa-solid fa-user"></i>About</a></li>
+                <li><a href="learning.html">Learning</a></li>
+                <li><a href="#">Dictonary</a></li>
+                <li><a href="forum.html">Learn Forum</a></li>
+            </ul>
+        </nav>
+        <div id="quiz-learning">
+            <div class="books">
+                <h2>Books</h2>
+                <!-- Book 1 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <a
+                                href="https://www.barnesandnoble.com/w/american-sign-language-dictionary-flexi-martin-l-sternberg/1127640054;jsessionid=C82C24674DE34A3AB96F05A6A50EC7AE.prodny_store02-atgap15?ean=9780062736345">
+                                <img src="images/books/book-1.png" alt="book-1">
+                            </a>
+                        </div>
+                        <div class="flip-card-back">
+                            <p class="title">American Sign Language <br>Dictionary</p>
+                            <p>⭐⭐⭐⭐⭐</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Book 2 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <a
+                                href="https://www.barnesandnoble.com/w/signing-made-easy-rod-r-butterworth/1137656443;jsessionid=C82C24674DE34A3AB96F05A6A50EC7AE.prodny_store02-atgap15?ean=9780399514906">
+                                <img src="images/books/book-2.png" alt="book-2">
+                            </a>
+                        </div>
+                        <div class="flip-card-back">
+                            <p class="title">Signing Made Easy</p>
+                            <p>⭐⭐⭐⭐</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Book 3 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <a
+                                href="https://www.barnesandnoble.com/w/signing-elaine-costello-phd/1115005187;jsessionid=C82C24674DE34A3AB96F05A6A50EC7AE.prodny_store02-atgap15?ean=9780553375398">
+                                <img src="images/books/book-3.png" alt="book-3">
+                            </a>
+                        </div>
+                        <div class="flip-card-back">
+                            <p class="title">Signing</p>
+                            <p>⭐⭐⭐⭐⭐</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Book 4 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <a
+                                href="https://www.barnesandnoble.com/w/the-gallaudet-childrens-dictionary-of-american-sign-language-the-editors-of-gallaudet-university-press/1123113175;jsessionid=C82C24674DE34A3AB96F05A6A50EC7AE.prodny_store02-atgap15?ean=9781563686313">
+                                <img src="images/books/book-4.png" alt="book-4">
+                            </a>
+                        </div>
+                        <div class="flip-card-back">
+                            <p class="title">The Gallaudet Children's Dictionary <br>of American Sign Language</p>
+                            <p>⭐⭐⭐⭐</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <hr>
+        <div id="yt-links">
+            <h2>YouTube Links</h2>
+            <ul>
+                <em></em>
+
+                <li><iframe width="560" height="315" src="https://www.youtube.com/embed/0FcwzMq4iWg?si=vkPwNHzS3105nuVJ"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen> </iframe></li>
+                <li><iframe width="560" height="315" src="https://www.youtube.com/embed/G6hVRVG74lc?si=wcjqd6titjJkE0yK"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe></li>
+                <li><iframe width="560" height="315" src="https://www.youtube.com/embed/DBQINq0SsAw?si=zUzgqg8jlIePVsrV"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe></li>
+            </ul>
+        </div>
+        <hr>
+        <div class="quiz-container">
+            <h2>Quiz</h2>
+            <div id="quiz">
+                <img id="question-image" src="" alt="Sign language image">
+                <div id="choices">
+                    <button class="choice-button">Option 1</button>
+                    <button class="choice-button">Option 2</button>
+                    <button class="choice-button">Option 3</button>
+                    <button class="choice-button">Option 4</button>
+                </div>
+            </div>
+            <div id="right-side">
+                <div id="score-image-container">
+                    <img id="score-image" src="" alt="Score image">
+                </div>
+                <h3>Play to make him Happy !!</h3>
+                <button id="start">Start</button>
+                <div id="result"></div>
+                <div id="score">Score: 0</div>
+                <button id="play-again" style="display: none;">Play Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+    <script>
+        $(document).ready(function () {
+            console.log("jQuery is working!");
+        });
+    </script>
+
+</body>
+
+</html>
