@@ -93,7 +93,13 @@ nav ul li a:hover {
 }
 
 
-
+#sl-image{
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    right:  130px;
+    border-radius: 15px;
+}
 #asl-form {
     margin: 1rem 0;
 }
@@ -146,7 +152,7 @@ nav ul li a:hover {
     opacity: 1;
 }
 
-/* .btn {
+.btn {
     display: block;
     margin: 50px auto;
     width: fit-content;
@@ -157,7 +163,11 @@ nav ul li a:hover {
     background-color: #fde2e4;
     color: #000;
     transition: background 0.5s;
-} */
+    font-size: 18px;
+}
+#sign-language-select option{
+    height: 15px;
+}
 
 .btn:hover {
     background: linear-gradient(40deg, #dcd6f7, #fde2e4);
