@@ -92,6 +92,7 @@ nav ul li a:hover {
 }
 
 #input-text {
+    padding-left:  15px;
     font-size: 1.125rem;
     height: 48px;
     width: 100%;
