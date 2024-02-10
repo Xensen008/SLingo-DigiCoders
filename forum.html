@@ -10,20 +10,24 @@
 </head>
 
 <body>
-    <nav>
-        <div class="logo">
-            <span><b>S</b></span><b>Lingo</b>
-        </div>
-        <ul>
-            <li><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
-            <li><a href="#About"><i class="fa-solid fa-user"></i>About</a></li>
-            <li><a href="#">Learning</a></li>
-            <li><a href="#">Dictonary</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <span><b>S</b></span><b>Lingo</b>
+            </div>
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="#About"><i class="fa-solid fa-user"></i>About</a></li>
+                <li><a href="#">Learning</a></li>
+                <li><a href="#">Dictonary</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <div id="forum">
         <h1>Learn Forum</h1>
-        <input id="username" type="text" placeholder="Enter your username here">
+        <input id="username" type="text" placeholder="Enter your username here" disabled>
+        <button id="change-username">Change Username</button>
         <div id="messages"></div>
         <input id="input" type="text" placeholder="Enter your message here">
         <button id="submit">Post</button>
