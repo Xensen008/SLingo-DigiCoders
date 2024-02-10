@@ -24,6 +24,66 @@
         </nav>
         <div id="quiz-learning">
             <div class="books">
+                <h1>Books</h1>
+                <!-- Wrap each book in a flip-card div -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/books/book-1.png" alt="book-1">
+                        </div>
+                        <div class="flip-card-back">
+                            <p class="title">American Sign Language</p>
+                            <p>Dictionary</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="books">
+                    <h1>Books</h1>
+                    <!-- Wrap each book in a flip-card div -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/books/book-1.png" alt="book-1">
+                            </div>
+                            <div class="flip-card-back">
+                                <p class="title">Signing Made Easy</p>
+                                <p>Dictionary</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="books">
+                        <h1>Books</h1>
+                        <!-- Wrap each book in a flip-card div -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="images/books/book-1.png" alt="book-1">
+                                </div>
+                                <div class="flip-card-back">
+                                    <p class="title">American Sign Language</p>
+                                    <p>Dictionary</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="books">
+                            <h1>Books</h1>
+                            <!-- Wrap each book in a flip-card div -->
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="images/books/book-1.png" alt="book-1">
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <p class="title">American Sign Language</p>
+                                        <p>Dictionary</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Repeat for other books... -->
+                        </div>
+                    </div>
+                    <!-- <div id="quiz-learning">
+            <div class="books">
 
                 <h1>Books</h1>
                 <a
@@ -47,26 +107,48 @@
                     <p>The Gallaudet Children's Dictionary <br>of American Sign Language</p>
                 </a>
             </div>
-        </div>
-        <h1>Welcome to Quiz</h1>
-        <div id="quiz">
-            <img id="question-image" src="" alt="Sign language image">
-            <div id="choices">
-                <button class="choice-button">Option 1</button>
-                <button class="choice-button">Option 2</button>
-                <button class="choice-button">Option 3</button>
-                <button class="choice-button">Option 4</button>
+        </div> -->
+                    <div id="yt-links">
+                        <h2>YouTube Links</h2>
+                        <ul>
+                            <em></em>
+
+                            <li><iframe width="560" height="315"
+                                    src="https://www.youtube.com/embed/0FcwzMq4iWg?si=vkPwNHzS3105nuVJ"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen> </iframe></li>
+                            <li><iframe width="560" height="315"
+                                    src="https://www.youtube.com/embed/G6hVRVG74lc?si=wcjqd6titjJkE0yK"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe></li>
+                            <li><iframe width="560" height="315"
+                                    src="https://www.youtube.com/embed/DBQINq0SsAw?si=zUzgqg8jlIePVsrV"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe></li>
+                        </ul>
+                    </div>
+                    <div id="quiz">
+                        <h1>Welcome to Quiz</h1>
+                        <img id="question-image" src="" alt="Sign language image">
+                        <div id="choices">
+                            <button class="choice-button">Option 1</button>
+                            <button class="choice-button">Option 2</button>
+                            <button class="choice-button">Option 3</button>
+                            <button class="choice-button">Option 4</button>
+                        </div>
+                    </div>
+                    <div id="right-side">
+                        <div id="result"></div>
+                        <div id="score">Score: 0</div>
+                        <button id="start">Start</button>
+                        <button id="play-again" style="display: none;">Play Again</button>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div id="right-side">
-            <div id="result"></div>
-            <div id="score">Score: 0</div>
-            <button id="start">Start</button>
-            <button id="play-again" style="display: none;">Play Again</button>
-        </div>
-    </div>
-    </div>
-    <script src="quiz.js"></script>
+            <script src="quiz.js"></script>
 </body>
 
 </html>
