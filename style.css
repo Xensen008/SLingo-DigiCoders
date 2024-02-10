@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,900;1,100;1,400&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -7,7 +8,8 @@
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+
     background: linear-gradient(to right, #E6E6FA, #B0C4DE);
     color: #000;
 }
@@ -236,36 +238,41 @@ nav ul li a {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    border-top : 2px solid black;
+    border-top : 2px solid #ddd;
+    padding: 20px;
 }
-.text{
-    line-height: 2;
-    text-wrap: wrap;
-    text-align: justify;
+
+.text h1{
+    font-size: 24px;
+    margin-bottom: 10px;
 }
-.text p{
-    font-size: 20px;
-    font-weight: 500;
-}
-.info .text{
-    width: 72%;
-}
+
 .info img{
     height: 300px;
     width: 325px;
-    position: absolute;
-    right : 30px;
-    top : 35px;
     border-radius: 20px;
     box-shadow: 0 20px 30px -6px rgba(238, 103, 97, 0.5);
+    margin-top: 20px;
 }
-/* .info img:hover {
-    transform: translateY(3px);
-    box-shadow: none;
-} */
+
 #About{
-    background-color: #fff8e1;
+    background-color: #B0C4DE;
 }
+
+.blob {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #ffcccc;
+    opacity: 1;
+    filter: blur(12px);
+    animation: blob-bounce 5s infinite ease;
+}
+
 .card {
     position: relative;
     width: 200px;
@@ -358,23 +365,26 @@ nav ul li a {
 
 .books {
     display: flex;
-    flex-wrap: wrap; /* Allow the books to wrap onto multiple lines */
-    justify-content: space-between;
-    gap: 20px;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 70px;
     width: 100%;
+    height: 300px;
+    background-color: white;
+    border-radius: 15px;
+    padding : 20px;
 }
 
 .flip-card {
     background-color: transparent;
-    width: 190px;
-    height: 254px;
-    perspective: 1000px;
+    width: 160px;
+    height: 210px;
     font-family: sans-serif;
 }
 
 .flip-card-inner {
     position: relative;
-    width: 100%;
+    width: 140px;
     height: 100%;
     text-align: center;
     transition: transform 0.8s;
@@ -438,16 +448,18 @@ hr {
 }
 
 #yt-links {
+    height: 300px;
     width: 100%;
     padding: 20px;
-
+    background-color: white;
+    border-radius: 15px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 #yt-links iframe{
-    width: 350px;
-    height: 270px;
+    width: 295px;
+    height: 180px;
     margin-bottom: 20px;
     border: 2px solid black;
     margin-left : 40px;
@@ -473,6 +485,9 @@ hr {
     margin-bottom: 10px;
 }
 
+#yt-links iframe:hover {
+    transform: scale(1.05);
+}
 #yt-links ul li a {
     color: #0066cc;
     text-decoration: none;
@@ -482,7 +497,7 @@ hr {
     text-decoration: underline;
 }
 
-/* Your existing CSS code */
+
 
 /* Responsive styles */
 @media (max-width: 768px) {
@@ -534,7 +549,11 @@ hr {
     justify-content: center;
     flex-direction: row;
     width: 100%;
-    height: auto;
+    height: 800px;
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+    top : 38px;
 }
 #quiz{
     width: 50%; 
@@ -554,7 +573,8 @@ hr {
 
 #question-image {
     width: 100%;
-    height: 150px;
+    height: px;
+    border: 4px solid black;
 }
 
 #choices {
@@ -566,12 +586,12 @@ hr {
     margin: 10px 0;
     padding: 10px;
     font-size: 18px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add this line */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .choice-button:hover {
-    transform: scale(1.05); /* Add this line */
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.1); /* Add this line */
+    transform: scale(1.05); 
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1); 
 }
 
 #score-image {
@@ -621,16 +641,53 @@ hr {
 #start:hover, #play-again:hover {
     background-color: #0056b3;
 }
-@media (max-width: 768px) {
-    .quiz-container{
+
+@media (max-width: 600px) {
+    #container-quiz-learning {
         flex-direction: column;
     }
+
+    #quiz-learning {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .books {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Adjust the gap size for mobile */
+    }
+
+    .flip-card {
+        width: 100%;
+    }
+
+    #yt-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #yt-links iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    #learning-link {
+        width: 100%;
+    }
+
+    .quiz-container {
+        flex-direction: column;
+    }
+
     #quiz, #right-side {
         width: 100%;
     }
+
     #right-side {
         height: auto;
     }
+
     #question-image {
         height: auto;
     }
