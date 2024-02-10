@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SLingo Learn Forum</title>
-    <!-- <link rel="stylesheet" href="forum.css"> -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -52,6 +51,7 @@
 
         // Get elements
         var username = document.getElementById('username');
+        var changeUsernameButton = document.getElementById('change-username');
         var input = document.getElementById('input');
         var submit = document.getElementById('submit');
         var messages = document.getElementById('messages');
@@ -63,8 +63,14 @@
         }
         username.value = localStorage.getItem('username');
 
-        // Update username in local storage when it changes
+        // Enable the username input when the change username button is clicked
+        changeUsernameButton.addEventListener('click', () => {
+            username.disabled = false;
+        });
+
+        // Disable the username input and update the username in local storage when it changes
         username.addEventListener('change', () => {
+            username.disabled = true;
             localStorage.setItem('username', username.value);
         });
 
