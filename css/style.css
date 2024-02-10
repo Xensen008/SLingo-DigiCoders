@@ -97,8 +97,12 @@ nav ul li a:hover {
     height: 250px;
     width: 250px;
     position: absolute;
-    right:  130px;
+    right:  140px;
     border-radius: 15px;
+    box-shadow: 10px 5px 5px grey; 
+}
+#sl-image:hover{
+    transform: scale(1.1);
 }
 #asl-form {
     margin: 1rem 0;
