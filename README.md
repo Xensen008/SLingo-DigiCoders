@@ -7,7 +7,7 @@ SLingo, short for SignLingo, is a revolutionary web platform designed to facilit
 ## Screenshot
 
 **HOME PAGE**
-![Screenshot](./images/home%20page%20htf.jpg)
+![Screenshot](./images/home%20banner.jpg)
 
 
 ## Table of Contents
