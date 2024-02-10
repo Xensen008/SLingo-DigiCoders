@@ -283,7 +283,6 @@ nav ul li a {
     display: flex;
     flex-direction: column; 
     align-items: flex-start;
-    border-top : 2px solid black;
 }
 
 #quiz-learning h2 {
@@ -298,7 +297,6 @@ nav ul li a {
     justify-content: space-between;
     gap: 20px;
     width: 100%;
-    border-top: 2px solid black;
 }
 
 .flip-card {
@@ -365,7 +363,7 @@ nav ul li a {
 
 .books a p {
     text-align: center;
-    font-size: 20px;
+    font-size: 10px;
     text-wrap: wrap;
 }
 #yt-links {
@@ -385,7 +383,7 @@ nav ul li a {
     border-radius: 25px;
 }
 #yt-links h2 {
-    color: #333;
+    color: #000000;
     margin-bottom: 10px;
     width: 100%;
 }
@@ -419,16 +417,19 @@ nav ul li a {
     width: 100%;
     display: flex;
     flex-direction: column; 
-    border-top : 2px solid black;
 }
 #learning-link{
     height: 370px;
     width: 50%;
     
 }
+#quiz-container{
+    display : flex;
+}
 #quiz{
     width: 100%; 
     text-align: center;
+    flex: 1;
 }
 
 
@@ -446,15 +447,15 @@ nav ul li a {
     margin: 10px 0;
     padding: 10px;
     font-size: 18px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add this line */
 }
 
-#score {
-    font-size: 24px;
-    margin-top: 20px;
+.choice-button:hover {
+    transform: scale(1.05); /* Add this line */
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1); /* Add this line */
 }
 
-#play-again {
-    display: none;
+#start, #play-again {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 18px;
@@ -463,12 +464,14 @@ nav ul li a {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Modify this line */
 }
 
-#play-again:hover {
+#start:hover, #play-again:hover {
     background-color: #0056b3;
+    transform: scale(1.05); /* Add this line */
 }
+
 
 #right-side {
     flex: 1;
