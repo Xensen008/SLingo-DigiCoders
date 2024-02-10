@@ -18,7 +18,6 @@ body {
 #header {
     width: 100%;
     height: 100vh;
-    /* background-image: url("./images/main\ web\ welcome.jpg"); */
     background-size: cover;
     background-position: center;
     animation: gradient 5s ease infinite;
@@ -29,17 +28,11 @@ body {
         background-position: 0% 50%;
     }
 
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
 }
 
 .container {
-    padding: 20px 10%;
+    padding: 40px 10%;
+    /* Increase padding */
 }
 
 nav {
@@ -96,20 +89,17 @@ nav ul li a:hover {
 #quiz-learning h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    /* Add some space between the heading and the books div */
     align-self: flex-start;
 }
 
 .books {
     display: flex;
     flex-wrap: wrap;
-    /* Allow the books to wrap onto multiple lines */
     justify-content: center;
     gap: 17px;
     width: 100%;
     height: 300px;
-    background-color:#b4c6e0;
-    /* background-color:rgb(176, 204, 228); */
+    background-color: #b4c6e0;
     border-radius: 15px;
     padding: 20px;
 }
@@ -119,6 +109,12 @@ nav ul li a:hover {
     width: 160px;
     height: 210px;
     font-family: sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* Add shadow / transition: 0.3s; margin-bottom: 20px; / Add margin */
+}
+
+.flip-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .flip-card-inner {
@@ -145,19 +141,16 @@ nav ul li a:hover {
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    /* border: 1px solid coral; */
     border-radius: 1rem;
 }
 
 .flip-card-front {
-    background: linear-gradient(120deg, rgb(95, 172, 223) 60%, rgb(156, 202, 249) 88%,
-            rgb(255, 211, 195) 40%, rgba(28, 20, 17, 0.603) 48%);
+    background: linear-gradient(120deg, rgb(95, 172, 223) 60%, rgb(156, 202, 249) 88%, rgb(255, 211, 195) 40%, rgba(28, 20, 17, 0.603) 48%);
     color: coral;
 }
 
 .flip-card-back {
-    background: linear-gradient(120deg, rgb(100, 165, 218) 30%, rgb(45, 151, 205) 88%,
-            bisque 40%, rgb(255, 185, 160) 78%);
+    background: linear-gradient(120deg, rgb(100, 165, 218) 30%, rgb(45, 151, 205) 88%, bisque 40%, rgb(255, 185, 160) 78%);
     color: white;
     transform: rotateY(180deg);
 }
@@ -360,12 +353,13 @@ nav .fas {
         margin-top: 100%;
         font-size: 16px;
     }
-    
+
     /*to hide the book and youtube*/
-    .books{
+    .books {
         display: none;
     }
-    #yt-links{
+
+    #yt-links {
         display: none;
     }
 
@@ -411,7 +405,7 @@ nav .fas {
         left: 25px;
         cursor: pointer;
     }
-    
 
-    
+
+
 }
