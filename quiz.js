@@ -47,7 +47,7 @@ var quizData = [
   {
     image: 'images/quiz/freedom.jpg',
     correctAnswer: 'Freedom',
-    choices: ['Perfect', 'Freedom', 'Shelter', 'Curtain']
+    choices: ['Perfect', 'Freedom', 'Shelter', '']
   },
 
 ];
@@ -55,6 +55,8 @@ var quizData = [
 var currentQuestionIndex = 0;
 var score = 0;
 var incorrect = false;
+
+document.getElementById('score-image').src = 'images/score-based-image/l.png';
 
 function displayQuestion() {
   var question = quizData[currentQuestionIndex];
@@ -68,17 +70,33 @@ function displayQuestion() {
     };
   }
 }
+function updateImageBasedOnScore() {
+  var imageElement = document.getElementById('score-image'); // Assuming you have an image with id 'score-image'
+  
+  if (score <= 2) {
+      imageElement.src = 'images/score-based-image/l.png'; // Low score image
+  } else if (score <= 6) {
+      imageElement.src = 'images/score-based-image/m.png'; // Medium score image
+  } else {
+      imageElement.src = 'images/score-based-image/h.png'; // High score image
+  }
+}
 
 function checkAnswer(userChoice) {
   var question = quizData[currentQuestionIndex];
   if (userChoice === question.correctAnswer) {
     score++;
     document.getElementById('result').textContent = 'Correct!';
+    updateImageBasedOnScore(); // Call the function here if the answer is correct
   } else {
     incorrect = true;
     document.getElementById('result').textContent = 'Incorrect. The correct answer was ' + question.correctAnswer;
     document.getElementById('play-again').style.display = 'block';
+    document.querySelector('h3').textContent = 'You Made him Sad';
+    document.getElementById('score-image').src = 'images/score-based-image/l.png';   
   }
+  
+  // Rest of the code...
   
   currentQuestionIndex++;
   if (currentQuestionIndex < quizData.length && !incorrect) {
@@ -93,35 +111,18 @@ function checkAnswer(userChoice) {
   }
   
   document.getElementById('score').textContent = 'Score: ' + score;
-  updateImageBasedOnScore();
 }
-function updateImageBasedOnScore() {
-  var imageElement = document.getElementById('score-image'); // Assuming you have an image with id 'score-image'
-  
-  if (score <= 2) {
-      imageElement.src = 'images/score-based-image/l.png';
-  } else if (score <= 6) {
-      imageElement.src = 'images/score-based-image/m.png';
-  } else {
-      imageElement.src = 'images/score-based-image/h.png';
+
+
+document.getElementById('play-again').addEventListener('click', function() {
+  location.reload(); // This will refresh the page
+});
+
+
+document.getElementById('start').addEventListener('click', function() {
+  this.style.display = 'none';
+  document.querySelector('h3').textContent = ''; // Make the "Play to Make him Happy" disappear
+  if (currentQuestionIndex === 0) { // Only display the question if it's the first question
+    displayQuestion();
   }
-}
-
-updateImageBasedOnScore(); // Call the function here
-
-document.getElementById('play-again').onclick = function() {
-currentQuestionIndex = 0;
-score = 0;
-incorrect = false;
-document.getElementById('score').textContent = 'Score: ' + score;
-document.getElementById('play-again').style.display = 'none';
-updateImageBasedOnScore();
-displayQuestion();
-};
-
-displayQuestion();
-
-document.getElementById('start').onclick = function() {
-this.style.display = 'none';
-displayQuestion();
-};
+});
