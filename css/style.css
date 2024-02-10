@@ -130,6 +130,12 @@ nav ul li a:hover {
 #input-text:focus {
     border: 2px solid grey;
 }
+#button{
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
 
 #asl-output {
     width: 100%;
