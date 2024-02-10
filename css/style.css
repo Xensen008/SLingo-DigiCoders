@@ -42,7 +42,7 @@ body {
 .container {
     padding: 20px 10%;
 }
-/* #B0C4DE */
+
 nav {
     display: flex;
     align-items: center;
@@ -91,6 +91,8 @@ nav ul li a:hover {
     font-size: 40 px;
     margin: 20px;
 }
+
+
 
 #asl-form {
     margin: 1rem 0;
@@ -144,7 +146,7 @@ nav ul li a:hover {
     opacity: 1;
 }
 
-.btn {
+/* .btn {
     display: block;
     margin: 50px auto;
     width: fit-content;
@@ -153,10 +155,9 @@ nav ul li a:hover {
     border-radius: 6px;
     text-decoration: none; 
     background-color: #fde2e4;
-    /* background: linear-gradient(45deg, #E6E6FA, #c2a7db); */
     color: #000;
     transition: background 0.5s;
-}
+} */
 
 .btn:hover {
     background: linear-gradient(40deg, #dcd6f7, #fde2e4);

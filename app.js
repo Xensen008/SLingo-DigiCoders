@@ -32,7 +32,6 @@ const signLanguageImages = {
         Y: 'images/ASL/Y.png',
         Z: 'images/ASL/Z.png',
         ' ': '       ',
-        // ... Add images for all letters
     },
     bsl: {
         A: 'images/BSL/A.png',
@@ -62,7 +61,6 @@ const signLanguageImages = {
         Y: 'images/BSL/Y.png',
         Z: 'images/BSL/Z.png',
         ' ': '       ',
-        // ... Add images for all letters and words
     },
 };
 
@@ -87,7 +85,6 @@ function displaySignLanguageImages(signLanguage, text) {
                 aslImage.classList.add('visible');
             }, 0);
         } else {
-            // Display each letter of the word individually
             for (const letter of word) {
                 if (signLanguageImages[signLanguage][letter]) {
                     const aslImage = document.createElement('img');
