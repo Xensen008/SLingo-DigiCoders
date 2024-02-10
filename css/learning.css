@@ -345,11 +345,21 @@ hr {
 nav .fas {
     display: none;
 }
+
+
 @media only screen and (max-width: 600px) {
     .header-text {
         /* background-image: url(images/phone-background.png); */
         margin-top: 100%;
         font-size: 16px;
+    }
+    
+    /*to hide the book and youtube*/
+    .books{
+        display: none;
+    }
+    #yt-links{
+        display: none;
     }
 
     .header-text h1 {
