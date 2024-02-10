@@ -283,4 +283,7 @@ nav .fas {
     #sl-image {
         visibility: hidden;
     }
+    sign-language-select{
+        width: 60%;
+    }
 }
