@@ -116,4 +116,7 @@ iframe {
         height: 215px;
         display: flex;
     }
+    img{
+        width: 400px;
+    }
 }
