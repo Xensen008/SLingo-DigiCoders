@@ -83,9 +83,7 @@ function displaySignLanguageImages(signLanguage, text) {
 
             aslOutput.appendChild(wordSpan);
 
-            setTimeout(function() {
-                aslImage.classList.add('visible');
-            }, 0);
+
             // aslOutput.appendChild(aslImage);
         }
     }
@@ -96,5 +94,10 @@ document.getElementById('asl-form').addEventListener('submit', function (event) 
     event.preventDefault();
     const signLanguage = signLanguageSelect.value;
     const inputTextValue = inputText.value.trim().toUpperCase();
+    const specialCharRegex = /[^A-Za-z ]/;
+    if (specialCharRegex.test(inputTextValue)) {
+        alert('Please enter only alphabets and spaces.');
+        return;
+    }
     displaySignLanguageImages(signLanguage, inputTextValue);
 });

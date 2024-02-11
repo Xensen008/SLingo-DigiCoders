@@ -12,6 +12,9 @@ body {
     padding: 20px 10%;
 }
 
+#navbar{
+    width: 100%;
+}
 section {
     margin: 2em 0;
     padding: 1em;

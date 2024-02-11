@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SLingo - yes!</title>
+    <title>SLingo - Home</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="favicon.ico">
     <script src="https://kit.fontawesome.com/637810c134.js" crossorigin="anonymous"></script>
@@ -28,15 +28,18 @@
                 <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
+                <img id="sl-image" src="images/sign-language.jpeg" alt="sign-language">
+
                 <p>SignLingo</p>
-                <h1>Welcome to <span style="color:#64378e;" id="element"></span><br>language converter</h1>
+                <h1>Welcome to <span style="color:#64378e;" id="element"></span><br>Language Converter</h1>
                 <select id="sign-language-select" class="btn btn2">
                     <option id="top" value="asl">ASL (American Sign Language)</option>
                     <option id="middle" value="bsl">BSL (British Sign Language)</option>
                 </select>
                 <form id="asl-form">
                     <input type="text" name="text" id="input-text" placeholder="Enter text">
-                    <button class="btn btn2" id="button" type="submit"><span>Translate</span></button>
+                    <button class="btn btn2" id="button" type="submit"><span>Translate</span><span><img
+                                src="images/hand-icon.png" width="20px" height="20px" alt="hand-icon"></span></button>
                 </form>
                 <div id="asl-output"></div>
             </div>
@@ -46,7 +49,7 @@
             <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
             <script>
                 var typed = new Typed('#element', {
-                    strings: ['Hand sign', 'British sign', 'American sign',],
+                    strings: ['Hand Sign', 'British Sign', 'American Sign',],
                     typeSpeed: 50,
                     backSpeed: 50,
                     loop: true

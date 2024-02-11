@@ -42,7 +42,7 @@ body {
 .container {
     padding: 20px 10%;
 }
-/* #B0C4DE */
+
 nav {
     display: flex;
     align-items: center;
@@ -92,6 +92,18 @@ nav ul li a:hover {
     margin: 20px;
 }
 
+
+#sl-image{
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    right:  140px;
+    border-radius: 15px;
+    box-shadow: 10px 5px 5px grey; 
+}
+#sl-image:hover{
+    transform: scale(1.1);
+}
 #asl-form {
     margin: 1rem 0;
 }
@@ -118,6 +130,13 @@ nav ul li a:hover {
 #input-text:focus {
     border: 2px solid grey;
 }
+#button{
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
 
 #asl-output {
     width: 100%;
@@ -136,7 +155,7 @@ nav ul li a:hover {
     width: 100px;
     height: 150px;
     border: 2px solid black;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }
 
@@ -148,18 +167,21 @@ nav ul li a:hover {
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 2px solid #B0C4DE;
+    border: 1.5px solid rgb(99, 99, 99);
     padding: 14px 50px;
     border-radius: 6px;
-    text-decoration: none;
-    background-color: #dcd6f7;
-    /* background: linear-gradient(45deg, #E6E6FA, #c2a7db); */
+    text-decoration: none; 
+    background-color: #fde2e4;
     color: #000;
     transition: background 0.5s;
+    font-size: 18px;
+}
+#sign-language-select option{
+    height: 15px;
 }
 
 .btn:hover {
-    background: linear-gradient(45deg, #B0C4DE, #E6E6FA);
+    background: linear-gradient(40deg, #dcd6f7, #fde2e4);
 }
 
 
@@ -265,5 +287,14 @@ nav .fas {
         cursor: pointer;
     }
 
+    #sl-image {
+        visibility: hidden;
+    }
+    #sign-language-select{
+        width: 158px;
 
+    }
+    #input-text{
+        width: 350px;
+    }
 }
