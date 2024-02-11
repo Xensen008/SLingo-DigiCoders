@@ -47,7 +47,7 @@ var quizData = [
   {
     image: 'images/quiz/freedom.jpg',
     correctAnswer: 'Freedom',
-    choices: ['Perfect', 'Freedom', 'Shelter', '']
+    choices: ['Perfect', 'Freedom', 'Shelter', 'Society']
   },
 
 ];

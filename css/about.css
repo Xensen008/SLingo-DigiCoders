@@ -76,6 +76,10 @@ iframe {
     .logo {
         font-size: 34px;
     }
+    .logo img{
+        width: 80px;
+        height: 50px;
+    }
 
     .btn.git {
         display: none;
