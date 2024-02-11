@@ -12,13 +12,15 @@ html {
 }
 
 body {
-    background: linear-gradient(to right, #E6E6FA, #B0C4DE);
+    /* background: linear-gradient(to right, #E6E6FA, #B0C4DE); */
+    background: #F5F5F5;
     color: #000;
 }
 
 #header {
     width: 100%;
     height: 100vh;
+    /* background-image: url("./images/main\ web\ welcome.jpg"); */
     background-size: cover;
     background-position: center;
     animation: gradient 5s ease infinite;
@@ -29,11 +31,17 @@ body {
         background-position: 0% 50%;
     }
 
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .container {
-    padding: 40px 10%;
-    /* Increase padding */
+    padding: 20px 10%;
 }
 
 nav {
@@ -42,7 +50,7 @@ nav {
     justify-content: space-between;
     flex-wrap: wrap;
     border-radius: 20px;
-    background: linear-gradient(45deg, #E6E6FA, #B0C4DE);
+    background: linear-gradient(45deg, #dcd6f7, #fde2e4);
     padding: 16px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
@@ -65,11 +73,25 @@ nav ul li a {
     font-size: 18px;
     position: relative;
 }
-
 nav ul li a:hover {
     color: #5d5d5d;
 }
 
+.header-text {
+    width: 100%;
+    margin-top: 10%;
+    font-size: 30px;
+    color: #000;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin: 20px;
+}
+.header-text p {
+    font-size: 40 px;
+    margin: 20px;
+}
 /* QUIZ-Learning CSS */
 
 #container-quiz-learning {
@@ -110,7 +132,7 @@ nav ul li a:hover {
     gap: 17px;
     width: 100%;
     height: 300px;
-    background-color: #b4c6e0;
+    background-color: #fde2e4;
     border-radius: 15px;
     margin-top : 40px;
     padding: 20px;
@@ -119,7 +141,7 @@ nav ul li a:hover {
 .flip-card {
     background-color: transparent;
     width: 160px;
-    height: 210px;
+    height: 190px;
     font-family: sans-serif;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     /* Add shadow / transition: 0.3s; margin-bottom: 20px; / Add margin */
@@ -199,11 +221,17 @@ hr {
     height: 300px;
     width: 100%;
     padding: 20px;
-    background-color: #b4c6e0;
+    background-color: #dcd6f7;
     border-radius: 15px;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    justify-content: space-between;
+}
+.links-yt{
+    width: 295px;
+    height: 180px;;
 }
 
 #yt-links iframe {
@@ -219,6 +247,8 @@ hr {
     color: #000000;
     margin-bottom: 10px;
     width: 100%;
+    text-align: center;
+    padding-left: 50px;
 }
 
 #yt-links ul {
@@ -260,15 +290,21 @@ hr {
 }
 
 .quiz-container {
+    padding-top :15px;
     display: flex;
     justify-content: center;
     flex-direction: row;
     width: 100%;
     height: 400px;
-    background-color: #b4c6e0;
+    background-color: #fde2e4;
     border-radius: 15px;
     position: relative;
     top: 38px;
+}
+.quiz-container h2{
+    text-align: center;
+    position: relative;
+    left : 80px;
 }
 
 
@@ -279,7 +315,7 @@ hr {
 #quiz,
 #right-side {
     position: relative;
-    top: 20px;
+    top: 40px;
     flex: 1;
     text-align: center;
 }
@@ -291,6 +327,7 @@ hr {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap : 15px;
 }
 
 #right-side h3 {
@@ -359,65 +396,105 @@ nav .fas {
 }
 
 
-@media only screen and (max-width: 600px) {
-    .header-text {
-        /* background-image: url(images/phone-background.png); */
-        margin-top: 100%;
-        font-size: 16px;
+@media only screen and (max-width: 768px) {
+    body {
+      font-size: 14px;
     }
-
-    /*to hide the book and youtube*/
+  
+    #header {
+      height: 100vh;
+      background-position: center;
+      background-size: cover;
+    }
+  
+    .header-text {
+      width: 100%;
+      margin-top: 10%;
+      font-size: 24px;
+    }
+  
+    .header-text h1 {
+      font-size: 36px;
+    }
+  
+    .header-text p {
+      font-size: 30px;
+    }
+  
+    #container-quiz-learning {
+      flex-direction: column;
+    }
+  
+    #quiz-learning {
+      height: auto;
+      width: 100%;
+    }
+  
     .books {
         display: none;
     }
-
+  
     #yt-links {
-        display: none;
+      height: auto;
+      padding: 10px;
     }
-
-    .header-text h1 {
-        font-size: 30px;
+  
+    .links-yt {
+      width: 100%;
     }
-
-    .logo {
-        font-size: 34px;
+  
+    #yt-links iframe {
+      width: 100%;
+      height: 100%;
     }
-
-    .btn.git {
-        display: none;
+  
+    #yt-links h2 {
+      font-size: 20px;
+      padding: 10px;
     }
-
-    nav .fas {
-        display: block;
-        font-size: 30px;
-
+  
+    #quiz {
+      height: 500px;
     }
-
-    nav ul {
-        background: #4f96eb;
-        position: fixed;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        padding-top: 50px;
-        z-index: 2;
-        transition: right 0.5s;
+  
+    #quiz,
+    #right-side {
+      top: 30px;
     }
-
-    nav ul li {
-        display: block;
-        margin: 25px;
-
+  
+    #right-side {
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      position: relative;
+      top : -25px;
     }
-
-    nav ul .fas {
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        cursor: pointer;
+  
+    #question-image {
+      height: 65px;
+      width: 100%;
     }
-
-
-
-}
+  
+    #choices {
+      height: 50%;
+      overflow-y: auto;
+    }
+  
+    .choice-button {
+      font-size: 14px;
+      padding: 5px;
+    }
+  
+    #start,
+    #play-again {
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+    #score-image{
+        height: 50px;
+        width: 50px;
+    }
+  }
