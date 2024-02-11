@@ -392,11 +392,14 @@ hr {
 }
 
 nav .fas {
-    display: none;
+    visibility: none;
 }
 
 
 @media only screen and (max-width: 768px) {
+    nav .fas {
+        visibility: visible;
+    }
     body {
       font-size: 14px;
     }
