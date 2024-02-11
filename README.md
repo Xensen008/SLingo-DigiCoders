@@ -1,4 +1,6 @@
-# SLingo - SignLingo
+# HACK THIS FALL 4.0
+
+# SLingo - SignLingo 👋
 
 ## Welcome to SLingo!
 
